@@ -1,29 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="theme-color" content="#f5f3ec">
+   <meta name="description" content="Explore ideias, conceitos e referências sobre educação, ciência e cultura.">
    <link rel="stylesheet" href="style.css">
-   <title>Destilando Ideias</title>
+   <title>Destilando Ideias — educação, ciência e cultura</title>
 </head>
 <body>
-   <header>
-      <h1>Destilando Ideias!</h1>
-   </header>   
-   <main>
-      <section>
-         <p>Este é o meu primeiro site. Aqui você encontrará conteúdo sobre diversos temas.</p>
-         <input type="text" placeholder="Digite o assunto de interesse." id="campo-pesquisa">
-         <button onclick= pesquisar()>Pesquisar</button>
-      </section>
-      <section class="resultados-pesquisa"
-         id = "resultados-pesquisa">
-      </section>
-   </main>
-   <footer>
-      <p>2024 - Destilando Ideias. Todos os direitos reservados.</p>
-      <p>Entrem em contato com o e-mail: contato@desliandoideias.com.br</p>
-   </footer>
+   <div class="site-shell">
+      <header class="site-header">
+         <a class="brand" href="#" aria-label="Destilando Ideias — início">
+            <span class="brand-mark" aria-hidden="true">di.</span>
+            <span class="brand-copy">
+               <strong>destilando ideias</strong>
+               <span>conhecimento em movimento</span>
+            </span>
+         </a>
+         <p class="header-note">EDUCAÇÃO <span>·</span> CIÊNCIA <span>·</span> CULTURA</p>
+      </header>
+
+      <main id="conteudo">
+         <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+               <p class="eyebrow"><span class="eyebrow-dot"></span> UM ESPAÇO PARA DESCOBRIR</p>
+               <h1 id="hero-title">Ideias para<br>pensar o <em>mundo.</em></h1>
+               <p class="hero-description">Um ponto de partida para explorar conceitos, abordagens e pessoas que ampliam nosso jeito de aprender.</p>
+            </div>
+
+            <form class="search-form" id="form-pesquisa" role="search">
+               <label for="campo-pesquisa">O que você quer descobrir?</label>
+               <div class="search-control">
+                  <input
+                     type="search"
+                     id="campo-pesquisa"
+                     name="pesquisa"
+                     placeholder="Ex.: Vygotsky, ciência..."
+                     autocomplete="off"
+                     aria-describedby="search-hint">
+                  <button type="submit">
+                     <span>Buscar</span>
+                     <span class="button-arrow" aria-hidden="true">↗</span>
+                  </button>
+               </div>
+               <p class="search-hint" id="search-hint">Busque por tema, conceito ou palavra-chave.</p>
+            </form>
+         </section>
+
+         <section class="discover" aria-labelledby="discover-title">
+            <div class="section-heading">
+               <div>
+                  <p class="eyebrow">COMECE POR AQUI</p>
+                  <h2 id="discover-title">Ideias em destaque</h2>
+               </div>
+               <p class="result-count" id="contagem-resultados" aria-live="polite" aria-atomic="true"></p>
+            </div>
+            <div class="results-grid" id="resultados-pesquisa" aria-live="polite"></div>
+         </section>
+      </main>
+
+      <footer class="site-footer">
+         <a class="footer-brand" href="#">destilando ideias<span>.</span></a>
+         <p>Feito para quem acredita que boas perguntas abrem caminhos.</p>
+         <a class="contact-link" href="mailto:contato@destilandoideias.com.br">Fale com a gente <span aria-hidden="true">↗</span></a>
+      </footer>
+   </div>
    <script src="dados.js"></script>
    <script src="app.js"></script>
 </body>
